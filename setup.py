@@ -2,16 +2,21 @@ from setuptools import setup, find_packages
 import subprocess
 import re
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+def read_long_description():
+    with open('README.md', 'r') as f:
+        return f.read()
+
+def read_version():
+    with open(os.path.join(os.path.dirname(__file__), 'VERSION')) as version_file:
+        return version_file.read().strip()
 
 setup(
     name="iliantest",
-    version="0.0.1",
+    version=read_version(),
     author="ILian",
     author_email="ilian@iazz.fr",
     description="azdadz",
-    long_description=long_description,
+    long_description=read_long_description(),
     long_description_content_type="text/markdown",
     url="https://github.com/ilianAZZ/best-python",
     packages=find_packages(),
