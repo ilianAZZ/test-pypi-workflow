@@ -1,9 +1,10 @@
 from setuptools import setup, find_packages
 import subprocess
 import re
+import os
 
 def read_long_description():
-    with open('README.md', 'r') as f:
+    with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
         return f.read()
 
 def read_version():
