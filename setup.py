@@ -4,11 +4,11 @@ import re
 import os
 
 def read_long_description():
-    with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
+    with open("README.md") as f:
         return f.read()
 
 def read_version():
-    with open(os.path.join(os.path.dirname(__file__), 'VERSION')) as version_file:
+    with open("VERSION") as version_file:
         return version_file.read().strip()
 
 setup(
